@@ -1,0 +1,21 @@
+{
+  "name": "bookstore",
+  "authors": [
+    "Karol Janowski <karol.janowski22@gmail.com>"
+  ],
+  "description": "bookstore ecommerce",
+  "main": "",
+  "keywords": [
+    "bookstore"
+  ],
+  "license": "MIT",
+  "homepage": "karoljanowski.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}
