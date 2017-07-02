@@ -1,5 +1,6 @@
 package com.karoljanowski.config;
 
+
 import com.karoljanowski.service.impl.UserSecurityService;
 import com.karoljanowski.utility.SecurityUtility;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/newUser",
             "/forgetPassword",
             "/login",
+            "/bookshelf",
+            "/bookDetail",
     };
 
     @Override

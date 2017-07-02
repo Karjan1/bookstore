@@ -11,6 +11,9 @@
 
     <title>Bookstore</title>
 
+    <!--Font Awesome-->
+    <link rel="stylesheet" th:href="@{/lib/components-font-awesome/css/font-awesome.min.css}"/>
+
     <!-- Bootstrap core CSS -->
     <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
@@ -40,10 +43,10 @@
             <ul class="nav navbar-nav">
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    <a th:href="@{/bookshelf}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Books <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Browse the bookshelf</a></li>
+                        <li><a th:href="@{/bookshelf}">Browse the bookshelf</a></li>
                         <li><a href="#">Opening hours &#38; directions</a></li>
                         <li><a href="#">FAQ</a></li>
 
@@ -57,7 +60,7 @@
                 </form>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">SHOPPING CART</a></li>
+                <li><a th:href="@{/shoppingCart/cart}">SHOPPING CART</a></li>
                 <li><a sec:authorize="isAnonymous()" th:href="@{/login}">MY ACCOUNT</a></li>
                 <li><a sec:authorize="isAuthenticated()"  th:href="@{/myProfile}">MY PROFILE</a></li>
                 <li><a sec:authorize="isAuthenticated()" th:href="@{/logout}">LOGOUT</a></li>
@@ -70,8 +73,9 @@
     <!-- Bootstrap core JavaScript
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script th:src="@{/lib/jquery/dist/jquery.min.js}"></script>
+    <script th:src="@{/lib/bootstrap/dist/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/scripts.js}"></script>
 
 
 </div>

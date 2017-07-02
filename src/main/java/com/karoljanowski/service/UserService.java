@@ -1,6 +1,9 @@
 package com.karoljanowski.service;
 
 import com.karoljanowski.domain.User;
+import com.karoljanowski.domain.UserBilling;
+import com.karoljanowski.domain.UserPayment;
+import com.karoljanowski.domain.UserShipping;
 import com.karoljanowski.domain.security.PasswordResetToken;
 import com.karoljanowski.domain.security.UserRole;
 
@@ -16,5 +19,9 @@ public interface UserService {
     User findByEmail(String email);
     User createUser(User user, Set<UserRole> userRoles) throws Exception;
     User save(User user);
+    void updateUserBilling(UserBilling userBilling, UserPayment userPayment, User user);
+    void setUserDefaultPayment(Long defaultPaymentId, User user);
+    void setUserDefaultShipping(Long defaultShippingId, User user);
+    void  updateUserShipping(UserShipping userShipping, User user);
 
 }
