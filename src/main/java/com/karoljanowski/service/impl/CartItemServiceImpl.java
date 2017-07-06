@@ -20,10 +20,15 @@ public class CartItemServiceImpl implements CartItemService {
     private CartItemRepository cartItemRepository;
 
     @Autowired
-    BookToCartItemRepository bookToCartItemRepository;
+    private BookToCartItemRepository bookToCartItemRepository;
     @Override
     public List<CartItem> findByShopppingCart(ShoppingCart shoppingCart) {
         return cartItemRepository.findByShoppingCart(shoppingCart);
+    }
+
+    @Override
+    public List<CartItem> findByOrder(Order order) {
+        return cartItemRepository.findByOrder(order);
     }
 
     @Override
@@ -73,6 +78,12 @@ public class CartItemServiceImpl implements CartItemService {
     public void removeById(CartItem cartItem) {
         bookToCartItemRepository.deleteByCartItem(cartItem);
         cartItemRepository.delete(cartItem);
+    }
+
+    @Override
+    public CartItem save(CartItem cartItem) {
+        cartItemRepository.save(cartItem);
+        return cartItem;
     }
 }
 

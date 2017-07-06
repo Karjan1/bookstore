@@ -30,7 +30,7 @@ public class Book {
 
     @OneToMany(mappedBy ="book")
     @JsonIgnore
-    private List<BookToCartItem> booiToCartItemList;
+    private List<BookToCartItem> bookToCartItemList;
 
     @Column(columnDefinition = "text")
     private String description;
@@ -175,12 +175,12 @@ public class Book {
         this.bookImage = bookImage;
     }
 
-    public List<BookToCartItem> getBooiToCartItemList() {
-        return booiToCartItemList;
+    public List<BookToCartItem> getBookToCartItemList() {
+        return bookToCartItemList;
     }
 
-    public void setBooiToCartItemList(List<BookToCartItem> booiToCartItemList) {
-        this.booiToCartItemList = booiToCartItemList;
+    public void setBookToCartItemList(List<BookToCartItem> bookToCartItemList) {
+        this.bookToCartItemList = bookToCartItemList;
     }
 }
 

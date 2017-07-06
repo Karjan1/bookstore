@@ -17,7 +17,7 @@ public class CartItem {
     private int qty;
     private BigDecimal subtotal;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     private Book book;
 
 

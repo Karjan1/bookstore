@@ -39,6 +39,10 @@ public class User implements UserDetails {
     @JsonIgnore
     private List<UserPayment> userPaymentList = new ArrayList<>();
 
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Order> orderList = new ArrayList<>();
+
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private ShoppingCart shoppingCart;
@@ -157,6 +161,14 @@ public class User implements UserDetails {
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
+    }
+
+    public List<Order> getOrderList() {
+        return orderList;
+    }
+
+    public void setOrderList(List<Order> orderList) {
+        this.orderList = orderList;
     }
 
     @Override

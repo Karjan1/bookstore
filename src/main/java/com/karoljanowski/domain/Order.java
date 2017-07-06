@@ -29,6 +29,9 @@ public class Order {
     @OneToOne( cascade = CascadeType.ALL)
     private Payment payment;
 
+    @OneToOne( cascade = CascadeType.ALL)
+    private Billing billing;
+
     @ManyToOne
     private User user;
 
@@ -110,6 +113,14 @@ public class Order {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Billing getBilling() {
+        return billing;
+    }
+
+    public void setBilling(Billing billing) {
+        this.billing = billing;
     }
 }
 

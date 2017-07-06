@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header"/>
+<body>
+<div th:replace="common/header :: navbar"/>
+
+
+<div class="container">
+    <hr style="position: absolute; background-color: #333; z-index: -1; height: 6px; width: 100%; margin-top: 100px"/>
+    <div class="row">
+        <div class="col-xs-8"><h2 class="section-headline"><span>User Account</span></h2> </div>
+        <div class="col-xs-4"><img src="/image/logo.png" class="img-responsive"/></div>
+    </div>
+
+    <img src="/image/wood.png" class="img-responsive" style="margin-top: -75px"/>
+    <div class="row" style="margin-top: 10px">
+        <div class="col-xs-12">
+            <div class="alert alert-success">
+                <h3><i class="fa fa-check" aria-hidden="true" style="color: limegreen"></i>Thank you. Your order have been placed. You will recieve confirmation email</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="common/header :: body-bottom-scripts"/>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
