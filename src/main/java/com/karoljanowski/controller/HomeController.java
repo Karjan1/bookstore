@@ -101,7 +101,7 @@ public class HomeController {
 
         Role role = new Role();
         role.setRoleId(1);
-        role.setName("USER_ROLE");
+        role.setName("ROLE_USER");
         Set<UserRole> userRoles = new HashSet<>();
         userRoles.add(new UserRole(user, role));
         userService.createUser(user, userRoles);
